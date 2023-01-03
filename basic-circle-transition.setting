@@ -1,0 +1,194 @@
+{
+	Tools = ordered() {
+		Ellipse1 = EllipseMask {
+			Inputs = {
+				Filter = Input { Value = FuID { "Fast Gaussian" }, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Width = Input {
+					SourceOp = "Ellipse1Width",
+					Source = "Value",
+				},
+				Height = Input {
+					SourceOp = "Ellipse1Height",
+					Source = "Value",
+					Expression = "Width",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 440, 82.5 } },
+		},
+		Ellipse1Width = BezierSpline {
+			SplineColor = { Red = 225, Green = 255, Blue = 0 },
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 0, RH = { 4, 0.0313333333333333 }, Flags = { Linear = true } },
+				[12] = { 0.094, LH = { 8, 0.0626666666666667 }, RH = { 13, 0.0783333333333333 }, Flags = { Linear = true } },
+				[15] = { 0.047, LH = { 14, 0.0626666666666667 }, RH = { 16, 0.0406666666666667 }, Flags = { Linear = true } },
+				[18] = { 0.028, LH = { 17, 0.0343333333333333 }, RH = { 20, 0.486 }, Flags = { Linear = true } },
+				[24] = { 1.402, LH = { 22, 0.944 }, RH = { 44, 1.402 }, Flags = { Linear = true } },
+				[84] = { 1.402, LH = { 64, 1.402 }, RH = { 85.6666666666667, 0.934666666666667 }, Flags = { Linear = true } },
+				[89] = { 0, LH = { 87.3333333333333, 0.467333333333333 }, Flags = { Linear = true } }
+			}
+		},
+		Ellipse1Height = BezierSpline {
+			SplineColor = { Red = 0, Green = 255, Blue = 255 },
+			CtrlWZoom = false,
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 0, Flags = { Linear = true } }
+			}
+		},
+		Background2 = Background {
+			Inputs = {
+				GlobalOut = Input { Value = 110, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				TopLeftRed = Input {
+					SourceOp = "Background2TopLeftRed",
+					Source = "Value",
+				},
+				TopLeftGreen = Input {
+					SourceOp = "Background2TopLeftGreen",
+					Source = "Value",
+				},
+				TopLeftBlue = Input {
+					SourceOp = "Background2TopLeftBlue",
+					Source = "Value",
+				},
+				TopLeftAlpha = Input {
+					SourceOp = "Background2TopLeftAlpha",
+					Source = "Value",
+				},
+				EffectMask = Input {
+					SourceOp = "Ellipse1",
+					Source = "Mask",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 440, 148.5 } },
+		},
+		Background2TopLeftRed = BezierSpline {
+			SplineColor = { Red = 255, Green = 0, Blue = 0 },
+			NameSet = true,
+			KeyFrames = {
+				[83] = { 0.368627450980392, Flags = { Linear = true } }
+			}
+		},
+		Background2TopLeftGreen = BezierSpline {
+			SplineColor = { Red = 0, Green = 255, Blue = 0 },
+			NameSet = true,
+			KeyFrames = {
+				[83] = { 0.725490196078431, Flags = { Linear = true } }
+			}
+		},
+		Background2TopLeftBlue = BezierSpline {
+			SplineColor = { Red = 0, Green = 0, Blue = 255 },
+			NameSet = true,
+			KeyFrames = {
+				[83] = { 1, Flags = { Linear = true } }
+			}
+		},
+		Background2TopLeftAlpha = BezierSpline {
+			SplineColor = { Red = 180, Green = 180, Blue = 180 },
+			CtrlWZoom = false,
+			NameSet = true,
+			KeyFrames = {
+				[83] = { 1, Flags = { Linear = true } }
+			}
+		},
+		Duplicate1 = Fuse.Duplicate {
+			Inputs = {
+				Copies = Input { Value = 3, },
+				TimeOffset = Input {
+					SourceOp = "Duplicate1TimeOffset",
+					Source = "Value",
+				},
+				GainNest = Input { Value = 1, },
+				RedGain = Input {
+					SourceOp = "Duplicate1RedGain",
+					Source = "Value",
+				},
+				GreenGain = Input {
+					SourceOp = "Duplicate1GreenGain",
+					Source = "Value",
+				},
+				BlueGain = Input {
+					SourceOp = "Duplicate1BlueGain",
+					Source = "Value",
+				},
+				AlphaGain = Input {
+					SourceOp = "Duplicate1AlphaGain",
+					Source = "Value",
+				},
+				BlurNest = Input { Value = 1, },
+				Background = Input {
+					SourceOp = "Background2",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 440, 214.5 } },
+		},
+		Duplicate1TimeOffset = BezierSpline {
+			SplineColor = { Red = 243, Green = 7, Blue = 70 },
+			NameSet = true,
+			KeyFrames = {
+				[0] = { -3, RH = { 27.3333333333333, -3 }, Flags = { Linear = true } },
+				[82] = { -3, LH = { 54.6666666666667, -3 }, RH = { 82.3333333333333, -1.66666666666667 }, Flags = { Linear = true } },
+				[83] = { 1, LH = { 82.6666666666667, -0.333333333333333 }, Flags = { Linear = true } }
+			}
+		},
+		Duplicate1RedGain = BezierSpline {
+			SplineColor = { Red = 239, Green = 84, Blue = 118 },
+			NameSet = true,
+			KeyFrames = {
+				[18] = { 0.567, RH = { 21.3333333333333, 0.584666666666667 }, Flags = { Linear = true } },
+				[28] = { 0.62, LH = { 24.6666666666667, 0.602333333333333 }, RH = { 29.3333333333333, 0.73 }, Flags = { Linear = true } },
+				[32] = { 0.95, LH = { 30.6666666666667, 0.84 }, RH = { 48.6666666666667, 0.95 }, Flags = { Linear = true } },
+				[82] = { 0.95, LH = { 65.3333333333333, 0.95 }, Flags = { Linear = true } }
+			}
+		},
+		Duplicate1GreenGain = BezierSpline {
+			SplineColor = { Red = 221, Green = 150, Blue = 10 },
+			NameSet = true,
+			KeyFrames = {
+				[28] = { 0.63, RH = { 29.3333333333333, 0.63 }, Flags = { Linear = true } },
+				[32] = { 0.63, LH = { 30.6666666666667, 0.63 }, RH = { 48.6666666666667, 0.63 }, Flags = { Linear = true } },
+				[82] = { 0.63, LH = { 65.3333333333333, 0.63 }, Flags = { Linear = true } }
+			}
+		},
+		Duplicate1BlueGain = BezierSpline {
+			SplineColor = { Red = 69, Green = 217, Blue = 16 },
+			NameSet = true,
+			KeyFrames = {
+				[18] = { 0.622, RH = { 21.3333333333333, 0.595333333333333 }, Flags = { Linear = true } },
+				[28] = { 0.542, LH = { 24.6666666666667, 0.568666666666667 }, RH = { 29.3333333333333, 0.398 }, Flags = { Linear = true } },
+				[32] = { 0.11, LH = { 30.6666666666667, 0.254 }, RH = { 48.6666666666667, 0.11 }, Flags = { Linear = true } },
+				[82] = { 0.11, LH = { 65.3333333333333, 0.11 }, Flags = { Linear = true } }
+			}
+		},
+		Duplicate1AlphaGain = BezierSpline {
+			SplineColor = { Red = 13, Green = 222, Blue = 56 },
+			NameSet = true,
+			KeyFrames = {
+				[28] = { 0.142, RH = { 46, 0.142 }, Flags = { Linear = true } },
+				[82] = { 0.142, LH = { 64, 0.142 }, Flags = { Linear = true } }
+			}
+		},
+		MediaOut1 = MediaOut {
+			CtrlWZoom = false,
+			Inputs = {
+				Index = Input { Value = "0", },
+				Input = Input {
+					SourceOp = "Duplicate1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 660, 214.5 } },
+		}
+	},
+	ActiveTool = "MediaOut1"
+}

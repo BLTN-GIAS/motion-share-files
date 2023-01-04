@@ -1,0 +1,380 @@
+{
+	Tools = ordered() {
+		Rectangle1_2_1_4 = RectangleMask {
+			EnabledRegion = TimeRegion { { Start = 0, End = 44.9999, FrameLength = 1 } },
+			Inputs = {
+				Filter = Input { Value = FuID { "Fast Gaussian" }, },
+				BorderWidth = Input {
+					SourceOp = "Rectangle1_2_1_4BorderWidth",
+					Source = "Value",
+				},
+				Invert = Input { Value = 1, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Width = Input { Value = 0.108, },
+				Height = Input { Value = 0.192, },
+				Angle = Input { Value = 45, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 567.532, 72.8936 } },
+		},
+		Rectangle1_2_1_4BorderWidth = BezierSpline {
+			SplineColor = { Red = 16, Green = 35, Blue = 248 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0.6, RH = { 6.66666666666667, 0.6 } },
+				[20] = { 0.6, LH = { 13.3333333333333, 0.6 }, RH = { 26.6666666666667, 0.733333333333333 }, Flags = { Linear = true } },
+				[40] = { 1, LH = { 33.3333333333333, 0.866666666666667 }, Flags = { Linear = true } }
+			}
+		},
+		Rectangle1_2_1_1_4_2 = RectangleMask {
+			EnabledRegion = TimeRegion { { Start = 0, End = 44.9999, FrameLength = 1 } },
+			Inputs = {
+				EffectMask = Input {
+					SourceOp = "Rectangle1_2_1_4",
+					Source = "Mask",
+				},
+				Filter = Input { Value = FuID { "Fast Gaussian" }, },
+				BorderWidth = Input {
+					SourceOp = "Rectangle1_2_1_1_4_2BorderWidth",
+					Source = "Value",
+				},
+				PaintMode = Input { Value = FuID { "Subtract" }, },
+				Invert = Input { Value = 1, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Width = Input { Value = 0.108, },
+				Height = Input { Value = 0.192, },
+				Angle = Input { Value = 45, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 568.416, 106.698 } },
+		},
+		Rectangle1_2_1_1_4_2BorderWidth = BezierSpline {
+			SplineColor = { Red = 16, Green = 35, Blue = 248 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0.6, RH = { 6.66666666666667, 0.733333333333333 } },
+				[20] = { 1, LH = { 13.3333333333333, 0.866666666666667 }, Flags = { Linear = true } }
+			}
+		},
+		Background2 = Background {
+			Inputs = {
+				EffectMask = Input {
+					SourceOp = "Rectangle1_2_1_1_4_2",
+					Source = "Mask",
+				},
+				GlobalOut = Input { Value = 43, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				TopLeftRed = Input { Value = 0.996078431372549, },
+				TopLeftGreen = Input { Value = 0.819607843137255, },
+				TopLeftBlue = Input { Value = 0.937254901960784, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 567.532, 138.894 } },
+		},
+		Rectangle1_2_1_1_4_1 = RectangleMask {
+			EnabledRegion = TimeRegion { { Start = 0, End = 44.9999, FrameLength = 1 } },
+			Inputs = {
+				EffectMask = Input {
+					SourceOp = "Rectangle1_2_1_3",
+					Source = "Mask",
+				},
+				Filter = Input { Value = FuID { "Fast Gaussian" }, },
+				BorderWidth = Input {
+					SourceOp = "Rectangle1_2_1_1_4_1BorderWidth",
+					Source = "Value",
+				},
+				PaintMode = Input { Value = FuID { "Subtract" }, },
+				Invert = Input { Value = 1, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Width = Input { Value = 0.108, },
+				Height = Input { Value = 0.192, },
+				Angle = Input { Value = 45, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 733.416, 105.089 } },
+		},
+		Rectangle1_2_1_1_4_1BorderWidth = BezierSpline {
+			SplineColor = { Red = 16, Green = 35, Blue = 248 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0.37, RH = { 6.66666666666667, 0.45 } },
+				[20] = { 0.61, LH = { 13.3333333333333, 0.53 }, Flags = { Linear = true } }
+			}
+		},
+		Rectangle1_2_1_3 = RectangleMask {
+			EnabledRegion = TimeRegion { { Start = 0, End = 44.9999, FrameLength = 1 } },
+			Inputs = {
+				Filter = Input { Value = FuID { "Fast Gaussian" }, },
+				BorderWidth = Input {
+					SourceOp = "Rectangle1_2_1_3BorderWidth",
+					Source = "Value",
+				},
+				Invert = Input { Value = 1, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Center = Input { Value = { 0.5, 0.5 }, },
+				Width = Input { Value = 0.108, },
+				Height = Input { Value = 0.192, },
+				Angle = Input { Value = 45, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 732.532, 73.6977 } },
+		},
+		Rectangle1_2_1_3BorderWidth = BezierSpline {
+			SplineColor = { Red = 16, Green = 35, Blue = 248 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0.37, RH = { 6.66666666666667, 0.369666666666667 } },
+				[20] = { 0.369, LH = { 13.3333333333333, 0.369333333333333 }, RH = { 26.6666666666667, 0.449333333333333 }, Flags = { Linear = true } },
+				[40] = { 0.61, LH = { 33.3333333333333, 0.529666666666667 }, Flags = { Linear = true } }
+			}
+		},
+		Background2_3 = Background {
+			Inputs = {
+				EffectMask = Input {
+					SourceOp = "Rectangle1_2_1_1_4_1",
+					Source = "Mask",
+				},
+				GlobalOut = Input { Value = 43, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				TopLeftRed = Input { Value = 0.109803921568627, },
+				TopLeftGreen = Input { Value = 0.427450980392157, },
+				TopLeftBlue = Input { Value = 0.815686274509804, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 732.532, 139.583 } },
+		},
+		Merge5 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Background2",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Background2_3",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 732.532, 204.894 } },
+		},
+		Rectangle1_2_1_1_4 = RectangleMask {
+			EnabledRegion = TimeRegion { { Start = 0, End = 44.9999, FrameLength = 1 } },
+			Inputs = {
+				EffectMask = Input {
+					SourceOp = "Rectangle1_2_1_2",
+					Source = "Mask",
+				},
+				Filter = Input { Value = FuID { "Fast Gaussian" }, },
+				BorderWidth = Input {
+					SourceOp = "Rectangle1_2_1_1_4BorderWidth",
+					Source = "Value",
+				},
+				PaintMode = Input { Value = FuID { "Subtract" }, },
+				Invert = Input { Value = 1, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Width = Input { Value = 0.108, },
+				Height = Input { Value = 0.192, },
+				Angle = Input { Value = 45, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 898.416, 102.205 } },
+		},
+		Rectangle1_2_1_1_4BorderWidth = BezierSpline {
+			SplineColor = { Red = 16, Green = 35, Blue = 248 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0.21, RH = { 6.33333333333333, 0.262333333333333 } },
+				[19] = { 0.367, LH = { 12.6666666666667, 0.314666666666667 }, RH = { 19.3333333333333, 0.368 }, Flags = { Linear = true } },
+				[20] = { 0.37, LH = { 19.6666666666667, 0.369 }, Flags = { Linear = true } }
+			}
+		},
+		Background2_2 = Background {
+			Inputs = {
+				EffectMask = Input {
+					SourceOp = "Rectangle1_2_1_1_4",
+					Source = "Mask",
+				},
+				GlobalOut = Input { Value = 43, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				TopLeftRed = Input { Value = 0.63921568627451, },
+				TopLeftGreen = Input { Value = 0.894117647058824, },
+				TopLeftBlue = Input { Value = 0.858823529411765, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 897.532, 138.894 } },
+		},
+		Merge6 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge5",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Background2_2",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 897.532, 204.894 } },
+		},
+		Rectangle1_2_1_2 = RectangleMask {
+			EnabledRegion = TimeRegion { { Start = 0, End = 44.9999, FrameLength = 1 } },
+			Inputs = {
+				Filter = Input { Value = FuID { "Fast Gaussian" }, },
+				BorderWidth = Input {
+					SourceOp = "Rectangle1_2_1_2BorderWidth",
+					Source = "Value",
+				},
+				Invert = Input { Value = 1, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Width = Input { Value = 0.108, },
+				Height = Input { Value = 0.192, },
+				Angle = Input { Value = 45, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 896.647, 68.4011 } },
+		},
+		Rectangle1_2_1_2BorderWidth = BezierSpline {
+			SplineColor = { Red = 16, Green = 35, Blue = 248 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0.21, RH = { 6.66666666666667, 0.21 } },
+				[20] = { 0.21, LH = { 13.3333333333333, 0.21 }, RH = { 20.3333333333333, 0.216 }, Flags = { Linear = true } },
+				[21] = { 0.228, LH = { 20.6666666666667, 0.222 }, RH = { 27.3333333333333, 0.275633333333333 }, Flags = { Linear = true } },
+				[40] = { 0.3709, LH = { 33.6666666666667, 0.323266666666667 }, Flags = { Linear = true } }
+			}
+		},
+		Background2_1 = Background {
+			Inputs = {
+				EffectMask = Input {
+					SourceOp = "Rectangle1_2_1_1",
+					Source = "Mask",
+				},
+				GlobalOut = Input { Value = 43, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				TopLeftRed = Input { Value = 1, },
+				TopLeftGreen = Input { Value = 0.972549019607843, },
+				TopLeftBlue = Input { Value = 0.952941176470588, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 1062.53, 138.894 } },
+		},
+		Merge4 = Merge {
+			CtrlWZoom = false,
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge6",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Background2_1",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 1062.53, 205.236 } },
+		},
+		Rectangle1_2_1_1 = RectangleMask {
+			EnabledRegion = TimeRegion { { Start = 0, End = 44.9999, FrameLength = 1 } },
+			Inputs = {
+				EffectMask = Input {
+					SourceOp = "Rectangle1_2_1",
+					Source = "Mask",
+				},
+				Filter = Input { Value = FuID { "Fast Gaussian" }, },
+				BorderWidth = Input {
+					SourceOp = "Rectangle1_2_1_1BorderWidth",
+					Source = "Value",
+				},
+				PaintMode = Input {
+					SourceOp = "Rectangle1_2_1_1PaintMode",
+					Source = "Value",
+				},
+				Invert = Input { Value = 1, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Width = Input { Value = 0.108, },
+				Height = Input { Value = 0.192, },
+				Angle = Input { Value = 45, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 1062.53, 102.205 } },
+		},
+		Rectangle1_2_1_1BorderWidth = BezierSpline {
+			SplineColor = { Red = 16, Green = 35, Blue = 248 },
+			KeyFrames = {
+				[0] = { -0.2, RH = { 0.333333333333333, -0.0884333333333333 } },
+				[1] = { 0.1347, LH = { 0.666666666666667, 0.0231333333333333 }, RH = { 7, 0.1616035 }, Flags = { Linear = true } },
+				[19] = { 0.2154105, LH = { 13, 0.188507 }, RH = { 19.3333333333333, 0.216940333333333 }, Flags = { Linear = true } },
+				[20] = { 0.22, LH = { 19.6666666666667, 0.218470166666667 }, Flags = { Linear = true } }
+			}
+		},
+		Rectangle1_2_1_1PaintMode = BezierSpline {
+			SplineColor = { Red = 236, Green = 214, Blue = 222 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, Flags = { Linear = true, LockedY = true }, Value = FuID { "Subtract" } }
+			}
+		},
+		Rectangle1_2_1 = RectangleMask {
+			EnabledRegion = TimeRegion { { Start = 0, End = 44.9999, FrameLength = 1 } },
+			Inputs = {
+				ShowViewControls = Input { Value = 0, },
+				Filter = Input { Value = FuID { "Fast Gaussian" }, },
+				BorderWidth = Input {
+					SourceOp = "Rectangle1_2_1BorderWidth",
+					Source = "Value",
+				},
+				Invert = Input { Value = 1, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Width = Input { Value = 0.108, },
+				Height = Input { Value = 0.192, },
+				Angle = Input { Value = 45, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 1062.53, 68.1296 } },
+		},
+		Rectangle1_2_1BorderWidth = BezierSpline {
+			SplineColor = { Red = 16, Green = 35, Blue = 248 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { -0.4, RH = { 6.66666666666667, -0.333333333333333 } },
+				[20] = { -0.2, LH = { 13.3333333333333, -0.266666666666667 }, RH = { 20.3333333333333, -0.142666666666667 }, Flags = { Linear = true } },
+				[21] = { -0.028, LH = { 20.6666666666667, -0.0853333333333333 }, RH = { 27.3333333333333, 0.0547 }, Flags = { Linear = true } },
+				[40] = { 0.2201, LH = { 33.6666666666667, 0.1374 }, Flags = { Linear = true } }
+			}
+		}
+	},
+	ActiveTool = "Merge4"
+}

@@ -1,0 +1,212 @@
+{
+	Tools = ordered() {
+		outsideEllipse = EllipseMask {
+			NameSet = true,
+			EnabledRegion = TimeRegion { { Start = 0, End = 119.9999, FrameLength = 1 } },
+			Inputs = {
+				ShowViewControls = Input { Value = 0, },
+				Level = Input {
+					SourceOp = "Ellipse1_1Level",
+					Source = "Value",
+				},
+				Filter = Input { Value = FuID { "Box" }, },
+				SoftEdge = Input {
+					SourceOp = "Ellipse1_1SoftEdge",
+					Source = "Value",
+				},
+				BorderWidth = Input { Value = 0.003, },
+				Solid = Input { Value = 0, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Width = Input {
+					SourceOp = "Ellipse1_1Width",
+					Source = "Value",
+				},
+				Height = Input {
+					Value = 0.25,
+					Expression = "Width",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 1221.95, 238.623 } },
+		},
+		Ellipse1_1Level = BezierSpline {
+			SplineColor = { Red = 130, Green = 246, Blue = 132 },
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 1, RH = { 6.66666666666667, 0.666666666666667 } },
+				[20] = { 0, LH = { 13.3333333333333, 0.333333333333333 }, RH = { 22.6666666666667, 0 }, Flags = { Linear = true } },
+				[28] = { 0, LH = { 25.3333333333333, 0 }, RH = { 28.3333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+				[29] = { 1, LH = { 28.6666666666667, 0.666666666666667 }, RH = { 35.6666666666667, 0.666666666666667 }, Flags = { Linear = true } },
+				[49] = { 0, LH = { 42.3333333333333, 0.333333333333333 }, RH = { 52.3333333333333, 0 }, Flags = { Linear = true } },
+				[59] = { 0, LH = { 55.6666666666667, 0 }, RH = { 59.3333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+				[60] = { 1, LH = { 59.6666666666667, 0.666666666666667 }, RH = { 66.6666666666667, 0.666666666666667 }, Flags = { Linear = true } },
+				[80] = { 0, LH = { 73.3333333333333, 0.333333333333333 }, RH = { 82.6666666666667, 0 }, Flags = { Linear = true } },
+				[88] = { 0, LH = { 85.3333333333333, 0 }, RH = { 88.3333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+				[89] = { 1, LH = { 88.6666666666667, 0.666666666666667 }, RH = { 95.6666666666667, 0.666666666666667 }, Flags = { Linear = true } },
+				[109] = { 0, LH = { 102.333333333333, 0.333333333333333 }, Flags = { Linear = true } }
+			}
+		},
+		Ellipse1_1SoftEdge = BezierSpline {
+			SplineColor = { Red = 234, Green = 243, Blue = 3 },
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 0, RH = { 1, 0.001 } },
+				[3] = { 0.003, LH = { 2, 0.002 }, RH = { 8.66666666666667, 0.00433333333333333 }, Flags = { Linear = true } },
+				[20] = { 0.007, LH = { 14.3333333333333, 0.00566666666666667 }, RH = { 20.3333333333333, 0.00466666666666667 }, Flags = { Linear = true } },
+				[21] = { 0, LH = { 20.6666666666667, 0.00233333333333333 }, RH = { 23.3333333333333, 0 }, Flags = { Linear = true } },
+				[28] = { 0, LH = { 25.6666666666667, 0 }, RH = { 28.3333333333333, 0 }, Flags = { Linear = true } },
+				[29] = { 0, LH = { 28.6666666666667, 0 }, RH = { 30, 0.001 }, Flags = { Linear = true } },
+				[32] = { 0.003, LH = { 31, 0.002 }, RH = { 37.6666666666667, 0.00433333333333333 }, Flags = { Linear = true } },
+				[49] = { 0.007, LH = { 43.3333333333333, 0.00566666666666667 }, RH = { 49.3333333333333, 0.00466666666666667 }, Flags = { Linear = true } },
+				[50] = { 0, LH = { 49.6666666666667, 0.00233333333333333 }, RH = { 53, 0 }, Flags = { Linear = true } },
+				[59] = { 0, LH = { 56, 0 }, RH = { 59.3333333333333, 0 }, Flags = { Linear = true } },
+				[60] = { 0, LH = { 59.6666666666667, 0 }, RH = { 61, 0.001 }, Flags = { Linear = true } },
+				[63] = { 0.003, LH = { 62, 0.002 }, RH = { 68.6666666666667, 0.00433333333333333 }, Flags = { Linear = true } },
+				[80] = { 0.007, LH = { 74.3333333333333, 0.00566666666666667 }, RH = { 80.3333333333333, 0.00466666666666667 }, Flags = { Linear = true } },
+				[81] = { 0, LH = { 80.6666666666667, 0.00233333333333333 }, RH = { 83.3333333333333, 0 }, Flags = { Linear = true } },
+				[88] = { 0, LH = { 85.6666666666667, 0 }, RH = { 88.3333333333333, 0 }, Flags = { Linear = true } },
+				[89] = { 0, LH = { 88.6666666666667, 0 }, RH = { 90, 0.001 }, Flags = { Linear = true } },
+				[92] = { 0.003, LH = { 91, 0.002 }, RH = { 97.6666666666667, 0.00433333333333333 }, Flags = { Linear = true } },
+				[109] = { 0.007, LH = { 103.333333333333, 0.00566666666666667 }, RH = { 109.333333333333, 0.00466666666666667 }, Flags = { Linear = true } },
+				[110] = { 0, LH = { 109.666666666667, 0.00233333333333333 }, Flags = { Linear = true } }
+			}
+		},
+		Ellipse1_1Width = BezierSpline {
+			SplineColor = { Red = 225, Green = 255, Blue = 0 },
+			CtrlWZoom = false,
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 0.25, RH = { 6.66666666666667, 0.266666666666667 }, Flags = { Linear = true } },
+				[20] = { 0.3, LH = { 13.3333333333333, 0.283333333333333 }, RH = { 20.3333333333333, 0.283333333333333 }, Flags = { Linear = true } },
+				[21] = { 0.25, LH = { 20.6666666666667, 0.266666666666667 }, RH = { 23.6037772426982, 0.25 }, Flags = { Linear = true } },
+				[29] = { 0.25, LH = { 26.3027871104943, 0.242516437461987 }, RH = { 35.6666666666667, 0.266666666666667 } },
+				[49] = { 0.3, LH = { 42.3333333333333, 0.283333333333333 }, RH = { 49.3333333333333, 0.283333333333333 }, Flags = { Linear = true } },
+				[50] = { 0.25, LH = { 49.6666666666667, 0.266666666666667 }, RH = { 53.3333333333333, 0.25 }, Flags = { Linear = true } },
+				[60] = { 0.25, LH = { 56.6666666666667, 0.25 }, RH = { 66.6666666666667, 0.266666666666667 }, Flags = { Linear = true } },
+				[80] = { 0.3, LH = { 73.3333333333333, 0.283333333333333 }, RH = { 80.3333333333333, 0.283333333333333 }, Flags = { Linear = true } },
+				[81] = { 0.25, LH = { 80.6666666666667, 0.266666666666667 }, RH = { 83.5532407407012, 0.25 }, Flags = { Linear = true } },
+				[89] = { 0.25, LH = { 86.2765433495756, 0.24260265700225 }, RH = { 95.6666666666667, 0.266666666666667 } },
+				[109] = { 0.3, LH = { 102.333333333333, 0.283333333333333 }, RH = { 109.333333333333, 0.283333333333333 }, Flags = { Linear = true } },
+				[110] = { 0.25, LH = { 109.666666666667, 0.266666666666667 }, Flags = { Linear = true } }
+			}
+		},
+		Duplicate1 = Fuse.Duplicate {
+			CtrlWZoom = false,
+			Inputs = {
+				Copies = Input { Value = 3, },
+				TimeOffset = Input { Value = -5, },
+				Background = Input {
+					SourceOp = "outsideEllipse",
+					Source = "Mask",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 1223.03, 287.21 } },
+		},
+		Background1_1 = Background {
+			Inputs = {
+				EffectMask = Input {
+					SourceOp = "Duplicate1",
+					Source = "Output",
+				},
+				GlobalOut = Input { Value = 119, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				TopLeftRed = Input { Value = 1, },
+				TopLeftGreen = Input { Value = 1, },
+				TopLeftBlue = Input { Value = 1, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 1221.84, 338.293 } },
+		},
+		insideEllipse = EllipseMask {
+			NameSet = true,
+			Inputs = {
+				ShowViewControls = Input { Value = 0, },
+				Filter = Input { Value = FuID { "Fast Gaussian" }, },
+				BorderWidth = Input { Value = 0.003, },
+				Solid = Input { Value = 0, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Width = Input { Value = 0.25, },
+				Height = Input {
+					Value = 0.25,
+					Expression = "Width",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 1355.21, 241.236 } },
+		},
+		Merge1 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Background1_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Background1",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 1353.67, 338.434 } },
+		},
+		Background1 = Background {
+			Inputs = {
+				GlobalOut = Input { Value = 119, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				TopLeftRed = Input { Value = 1, },
+				TopLeftGreen = Input { Value = 1, },
+				TopLeftBlue = Input { Value = 1, },
+				EffectMask = Input {
+					SourceOp = "insideEllipse",
+					Source = "Mask",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 1355.03, 286.383 } },
+		},
+		Merge2 = Merge {
+			CtrlWZoom = false,
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text1",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 1480.65, 338.434 } },
+		},
+		Text1 = TextPlus {
+			Inputs = {
+				GlobalOut = Input { Value = 119, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				LayoutRotation = Input { Value = 1, },
+				TransformRotation = Input { Value = 1, },
+				Softness1 = Input { Value = 1, },
+				StyledText = Input { Value = "SUBSCRIBE", },
+				Font = Input { Value = "Roboto", },
+				Style = Input { Value = "Light", },
+				Size = Input { Value = 0.06, },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalJustificationNew = Input { Value = 3, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 1480.65, 288.127 } },
+		}
+	},
+	ActiveTool = "Merge2"
+}

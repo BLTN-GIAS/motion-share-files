@@ -1,0 +1,350 @@
+{
+	Tools = ordered() {
+		Text1 = TextPlus {
+			Inputs = {
+				GlobalOut = Input { Value = 119, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input {
+					SourceOp = "Publish4",
+					Source = "Value",
+				},
+				LayoutRotation = Input { Value = 1, },
+				TransformRotation = Input { Value = 1, },
+				SelectElement = Input { Value = 3, },
+				Select = Input { Value = 3, },
+				Enabled1 = Input { Value = 0, },
+				Name2 = Input { Value = "black Outline", },
+				Enabled3 = Input { Value = 1, },
+				Name4 = Input { Value = "side-line", },
+				Enabled4 = Input { Value = 1, },
+				Softness1 = Input { Value = 1, },
+				Position1 = Input { Value = 1, },
+				Offset1 = Input {
+					SourceOp = "Publish1",
+					Source = "Value",
+				},
+				Shear1 = Input { Value = 1, },
+				ShearX1 = Input { Value = -0.4, },
+				Size1 = Input { Value = 1, },
+				SizeX1 = Input {
+					SourceOp = "Publish2",
+					Source = "Value",
+					Expression = "SizeY1",
+				},
+				SizeY1 = Input { Value = 0.7, },
+				StyledText = Input { Value = "exsample", },
+				Font = Input { Value = "Open Sans", },
+				Style = Input { Value = "Bold", },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalLeftCenterRight = Input { Value = -1, },
+				HorizontalJustificationNew = Input { Value = 3, },
+				Opacity3 = Input { Value = 0.5, },
+				Overlap3 = Input { Value = 0, },
+				ElementShape3 = Input { Value = 2, },
+				Level3 = Input { Value = 1, },
+				ExtendHorizontal3 = Input { Value = -0.023, },
+				ExtendVertical3 = Input { Value = -0.047, },
+				Red3 = Input { Value = 0.298039215686275, },
+				Green3 = Input { Value = 0.298039215686275, },
+				Blue3 = Input { Value = 0.290196078431373, },
+				Softness3 = Input { Value = 1, },
+				SoftnessX3 = Input { Value = 0, },
+				SoftnessY3 = Input { Value = 0, },
+				Position3 = Input { Value = 1, },
+				Offset3 = Input {
+					SourceOp = "Path3",
+					Source = "Position",
+				},
+				Rotation3 = Input { Value = 1, },
+				Shear3 = Input { Value = 1, },
+				ShearX3 = Input { Value = -1, },
+				Size3 = Input { Value = 1, },
+				SizeX3 = Input { Value = 1.235, },
+				SizeY3 = Input { Value = 0.8, },
+				Thickness2 = Input { Value = 0.03, },
+				Red2 = Input { Value = 0, },
+				Softness2 = Input { Value = 1, },
+				Position2 = Input { Value = 1, },
+				Offset2 = Input {
+					SourceOp = "Publish1",
+					Source = "Value",
+				},
+				Rotation2 = Input { Value = 1, },
+				Shear2 = Input { Value = 1, },
+				ShearX2 = Input { Value = -0.4, },
+				Size2 = Input { Value = 1, },
+				SizeX2 = Input {
+					SourceOp = "Publish2",
+					Source = "Value",
+					Expression = "SizeY2",
+				},
+				SizeY2 = Input { Value = 0.7, },
+				Overlap4 = Input { Value = 0, },
+				Level4 = Input { Value = 1, },
+				Blue4 = Input { Value = 0, },
+				Softness4 = Input { Value = 1, },
+				Position4 = Input { Value = 1, },
+				Offset4 = Input {
+					SourceOp = "Path2",
+					Source = "Position",
+				},
+				Shear4 = Input { Value = 1, },
+				ShearX4 = Input { Value = -1, },
+				Size4 = Input { Value = 1, },
+				SizeX4 = Input { Value = 0.05, },
+				SizeY4 = Input {
+					SourceOp = "Text1SizeY4",
+					Source = "Value",
+				},
+				EffectMask = Input {
+					SourceOp = "Rectangle1",
+					Source = "Mask",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 705.378, 129.476 } },
+		},
+		Publish4 = PublishPoint {
+			Inputs = {
+				Value = Input { Value = { 0.232377666666667, 0.922018348623853 }, },
+			},
+		},
+		Publish1 = PublishPoint {
+			Inputs = {
+				Value = Input { Value = { 0, -0.014 }, },
+			},
+		},
+		Publish2 = PublishNumber {
+		},
+		Path3 = PolyPath {
+			DrawMode = "InsertAndModify",
+			Inputs = {
+				Displacement = Input {
+					SourceOp = "Path3Displacement",
+					Source = "Value",
+				},
+				PolyLine = Input {
+					Value = Polyline {
+						Points = {
+							{ Linear = true, LockY = true, X = -0.66, Y = -0.553, RX = 0.0156666666666667, RY = 0.0156666666666667 },
+							{ Linear = true, LockY = true, X = -0.613, Y = -0.506, LX = -0.0156666666666667, LY = -0.0156666666666667 }
+						}
+					},
+				},
+			},
+		},
+		Path3Displacement = BezierSpline {
+			SplineColor = { Red = 255, Green = 0, Blue = 178 },
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 0, RH = { 1.66666666666667, 0 }, Flags = { LockedY = true } },
+				[5] = { 1, LH = { 3.33333333333333, 1 }, Flags = { LockedY = true } }
+			}
+		},
+		Path2 = PolyPath {
+			DrawMode = "InsertAndModify",
+			Inputs = {
+				Displacement = Input {
+					SourceOp = "Path2Displacement_1",
+					Source = "Value",
+				},
+				PolyLine = Input {
+					Value = Polyline {
+						Points = {
+							{ Linear = true, LockY = true, X = -0.824, Y = -0.5503, RX = 0.0156666666666667, RY = 0.0153333333333333 },
+							{ Linear = true, LockY = true, X = -0.777, Y = -0.5043, LX = -0.0156666666666667, LY = -0.0153333333333333 }
+						}
+					},
+				},
+			},
+		},
+		Path2Displacement_1 = BezierSpline {
+			SplineColor = { Red = 255, Green = 0, Blue = 255 },
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 0, RH = { 1.66666666666667, 0 }, Flags = { LockedY = true } },
+				[5] = { 1, LH = { 3.33333333333333, 1 }, Flags = { LockedY = true } }
+			}
+		},
+		Text1SizeY4 = BezierSpline {
+			SplineColor = { Red = 185, Green = 253, Blue = 250 },
+			CtrlWZoom = false,
+			NameSet = true,
+			KeyFrames = {
+				[5] = { 0.708 }
+			}
+		},
+		Rectangle1 = RectangleMask {
+			Inputs = {
+				Filter = Input { Value = FuID { "Fast Gaussian" }, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Center = Input { Value = { 0.223809523809524, 0.915254237288136 }, },
+				Width = Input { Value = 0.449, },
+				Height = Input { Value = 0.094, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 705.555, 74.6531 } },
+		},
+		Text1_1 = TextPlus {
+			Inputs = {
+				Position2 = Input { Value = 1, },
+				Softness2 = Input { Value = 1, },
+				Thickness2 = Input { Value = 0.03, },
+				Rotation2 = Input { Value = 1, },
+				Size2 = Input { Value = 1, },
+				SizeX2 = Input {
+					SourceOp = "Publish2_1",
+					Source = "Value",
+					Expression = "SizeY2",
+				},
+				SizeY2 = Input { Value = 0.7, },
+				ShearX2 = Input { Value = -0.4, },
+				Shear2 = Input { Value = 1, },
+				Offset2 = Input {
+					SourceOp = "Publish1_1",
+					Source = "Value",
+				},
+				GlobalOut = Input { Value = 119, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input {
+					SourceOp = "Publish4",
+					Source = "Value",
+				},
+				LayoutRotation = Input { Value = 1, },
+				TransformRotation = Input { Value = 1, },
+				Name2 = Input { Value = "black Outline", },
+				Name4 = Input { Value = "side-line", },
+				Opacity1 = Input {
+					SourceOp = "Text1_1Opacity1",
+					Source = "Value",
+				},
+				Softness1 = Input { Value = 1, },
+				Position1 = Input { Value = 1, },
+				Offset1 = Input {
+					SourceOp = "Path1",
+					Source = "Position",
+				},
+				Shear1 = Input { Value = 1, },
+				ShearX1 = Input { Value = -0.4, },
+				Size1 = Input { Value = 1, },
+				SizeX1 = Input {
+					SourceOp = "Publish2_1",
+					Source = "Value",
+					Expression = "SizeY1",
+				},
+				SizeY1 = Input { Value = 0.7, },
+				StyledText = Input { Value = "exsample", },
+				Font = Input { Value = "Open Sans", },
+				Style = Input { Value = "Bold", },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalJustificationNew = Input { Value = 3, },
+				Opacity3 = Input { Value = 0.5, },
+				Overlap3 = Input { Value = 0, },
+				ElementShape3 = Input { Value = 2, },
+				Level3 = Input { Value = 1, },
+				ExtendHorizontal3 = Input { Value = -0.023, },
+				ExtendVertical3 = Input { Value = -0.047, },
+				Red3 = Input { Value = 0.298039215686275, },
+				Green3 = Input { Value = 0.298039215686275, },
+				Blue3 = Input { Value = 0.290196078431373, },
+				Softness3 = Input { Value = 1, },
+				SoftnessX3 = Input { Value = 0, },
+				SoftnessY3 = Input { Value = 0, },
+				Position3 = Input { Value = 1, },
+				Offset3 = Input { Value = { 0, -0.006 }, },
+				Rotation3 = Input { Value = 1, },
+				Shear3 = Input { Value = 1, },
+				ShearX3 = Input { Value = -1, },
+				Size3 = Input { Value = 1, },
+				SizeX3 = Input { Value = 1.235, },
+				SizeY3 = Input { Value = 0.8, },
+				Overlap4 = Input { Value = 0, },
+				Level4 = Input { Value = 1, },
+				Blue4 = Input { Value = 0, },
+				Softness4 = Input { Value = 1, },
+				Position4 = Input { Value = 1, },
+				Offset4 = Input { Value = { -0.166, -0.0043 }, },
+				Shear4 = Input { Value = 1, },
+				ShearX4 = Input { Value = -1, },
+				Size4 = Input { Value = 1, },
+				SizeX4 = Input { Value = 0.05, },
+				SizeY4 = Input {
+					SourceOp = "Text1_1SizeY4",
+					Source = "Value",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 887.475, 73.0132 } },
+		},
+		Publish2_1 = PublishNumber {
+		},
+		Publish1_1 = PublishPoint {
+			Inputs = {
+				Value = Input { Value = { 0, -0.014 }, },
+			},
+		},
+		Text1_1Opacity1 = BezierSpline {
+			SplineColor = { Red = 179, Green = 28, Blue = 244 },
+			NameSet = true,
+			KeyFrames = {
+				[10] = { 0, RH = { 12, 0 } },
+				[16] = { 1, LH = { 14, 1 } }
+			}
+		},
+		Path1 = PolyPath {
+			DrawMode = "InsertAndModify",
+			Inputs = {
+				Displacement = Input {
+					SourceOp = "Path1Displacement",
+					Source = "Value",
+				},
+				PolyLine = Input {
+					Value = Polyline {
+						Points = {
+							{ Linear = true, LockY = true, X = -0.5, Y = -0.5 }
+						}
+					},
+				},
+			},
+		},
+		Path1Displacement = BezierSpline {
+			SplineColor = { Red = 255, Green = 0, Blue = 255 },
+			NameSet = true,
+			KeyFrames = {
+				[16] = { 1, Flags = { LockedY = true } }
+			}
+		},
+		Text1_1SizeY4 = BezierSpline {
+			SplineColor = { Red = 185, Green = 253, Blue = 250 },
+			CtrlWZoom = false,
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 0, RH = { 1.66666666666667, 0 } },
+				[5] = { 0.708, LH = { 3.33333333333333, 0.708 } }
+			}
+		},
+		Merge1 = Merge {
+			CtrlWZoom = false,
+			Inputs = {
+				Background = Input {
+					SourceOp = "Text1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text1_1",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 887.475, 130.558 } },
+		}
+	},
+	ActiveTool = "Merge1"
+}
